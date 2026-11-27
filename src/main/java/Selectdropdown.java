@@ -3,6 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.tracing.opentelemetry.SeleniumSpanExporter;
 import org.openqa.selenium.support.ui.Select;
 
@@ -24,6 +25,9 @@ public class Selectdropdown
     public static void main(String[] args) throws InterruptedException {
 
         ChromeDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.getCapability(ChromeOptions.CAPABILITY);
+        driver = new ChromeDriver(options);
 
         driver.get("https://rahulshettyacademy.com/angularpractice/");
         driver.findElement(By.cssSelector("input[name='name']")).sendKeys("Ankur");
