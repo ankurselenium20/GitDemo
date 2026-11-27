@@ -29,7 +29,9 @@ public class Selectdropdown
         options.getCapability(ChromeOptions.CAPABILITY);
         driver = new ChromeDriver(options);
 
+
         driver.get("https://rahulshettyacademy.com/angularpractice/");
+        driver.manage().window().maximize();
         driver.findElement(By.cssSelector("input[name='name']")).sendKeys("Ankur");
         driver.findElement(By.cssSelector("input[name='email']")).sendKeys("abc.kumar@gmail.com");
         driver.findElement(By.id("exampleInputPassword1")).sendKeys("abc");
